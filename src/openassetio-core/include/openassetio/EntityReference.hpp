@@ -52,6 +52,17 @@ class EntityReference final {
   }
 
   /**
+   * Compare the contents of this reference with another for equality.
+   *
+   * @param other Entity refernce to compare against.
+   *
+   * @return `false` if contents are equal, `true` otherwise.
+   */
+  bool operator!=(const EntityReference& other) const {
+    return other.entityReferenceString_ != entityReferenceString_;
+  }
+
+  /**
    * @return The string representation of this entity reference.
    */
   [[nodiscard]] const Str& toString() const { return entityReferenceString_; }
