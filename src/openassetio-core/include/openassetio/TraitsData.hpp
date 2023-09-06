@@ -162,8 +162,18 @@ class OPENASSETIO_CORE_EXPORT TraitsData final {
    * Compares instances based on their trait and property values.
    *
    * @param other The instance to compare to.
+   * @return `true` if the instances are equal, `false` otherwise
    */
   bool operator==(const TraitsData& other) const;
+
+  /**
+   *
+   * Compares instances based on their trait and property values.
+   *
+   * @param other The instance to compare to
+   * @return `true` if the instances are not equal, `false` otherwise
+   */
+  bool operator!=(const TraitsData& other) const;
 
  private:
   TraitsData();

@@ -74,6 +74,7 @@ class TraitsData::Impl {
   }
 
   bool operator==(const Impl& other) const { return data_ == other.data_; }
+  bool operator!=(const Impl& other) const { return data_ != other.data_; }
 
  private:
   using Properties = std::unordered_map<trait::property::Key, trait::property::Value>;
@@ -124,5 +125,6 @@ trait::property::KeySet TraitsData::traitPropertyKeys(const trait::TraitId& trai
 }
 
 bool TraitsData::operator==(const TraitsData& other) const { return *impl_ == *other.impl_; }
+bool TraitsData::operator!=(const TraitsData & other) const { return *impl_ != *other.impl_; }
 }  // namespace OPENASSETIO_CORE_ABI_VERSION
 }  // namespace openassetio
